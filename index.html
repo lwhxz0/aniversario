@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aniversário da Nana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lilac: '#c4b5fd',
+              iris: '#8b5cf6',
+              grape: '#5b21b6',
+              plum: '#3b0764',
+            },
+            boxShadow: {
+              glow: '0 0 40px rgba(196, 181, 253, 0.35)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-plum">
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="module">
+      import { motion, AnimatePresence } from 'https://cdn.jsdelivr.net/npm/framer-motion@11.11.9/+esm';
+      window.Framer = { motion, AnimatePresence };
+    </script>
+    <script type="text/babel" src="script.js"></script>
+  </body>
+</html>
