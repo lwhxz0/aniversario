@@ -26,7 +26,7 @@ function NanaBirthdayPage() {
       setError('');
       return;
     }
-    setError('Ops! Essa senha não abriu o portal roxinho 💜');
+    setError('Hmm… essa não 👀 dica: tem a ver com sua cor favorita 💜');
   };
 
   if (!motion || !AnimatePresence) {
@@ -43,14 +43,14 @@ function NanaBirthdayPage() {
         {!unlocked ? (
           <motion.section
             key="login"
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.03 }}
+            initial={{ opacity: 0, y: 18, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -12, scale: 1.02 }}
             className="min-h-screen flex items-center justify-center px-4"
           >
             <div className="w-full max-w-md rounded-3xl bg-white/10 border border-lilac/30 backdrop-blur-xl p-8 shadow-glow">
               <h1 className="text-3xl sm:text-4xl font-bold text-center mb-3">Você é mesmo a Nana?</h1>
-              <p className="text-center text-lilac mb-8">Digite a senha secreta para abrir a surpresa.</p>
+              <p className="text-center text-lilac mb-8">Digite a senha secreta para entrar 💜</p>
 
               <form onSubmit={handleUnlock} className="space-y-4">
                 <input
@@ -64,7 +64,7 @@ function NanaBirthdayPage() {
                   type="submit"
                   className="w-full rounded-xl bg-gradient-to-r from-iris to-grape py-3 font-semibold transition hover:brightness-110"
                 >
-                  Entrar no aniversário
+                  Entrar
                 </button>
               </form>
 
